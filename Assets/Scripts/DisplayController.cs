@@ -39,6 +39,7 @@ public class DisplayController : MonoBehaviour
 
     public void DisplayAnswer()
     {
+        Debug.Log("inside DisplayAnswer method! =");
         string answer = calculator.Calculate(displayText.text);
         displayText.text = answer;
     }
