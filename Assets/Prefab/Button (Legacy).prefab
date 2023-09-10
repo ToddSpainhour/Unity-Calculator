@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7295623654274782451}
   - component: {fileID: 2537782850012613336}
   - component: {fileID: 8335207908552872484}
-  - component: {fileID: 3866749936177736371}
+  - component: {fileID: 413767352918694116}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -121,8 +121,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2537782850012613336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3866749936177736371
+      m_Calls:
+      - m_Target: {fileID: 413767352918694116}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: AppendValueToDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &413767352918694116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +143,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2939011681549087393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d6c76bd7dd68641a7f553b1a2f4d4a, type: 3}
+  m_Script: {fileID: 11500000, guid: f779f43b64c0e8f46b7aca4a7b19717d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 
+  displayController: {fileID: 0}
 --- !u!1 &7693266994690659804
 GameObject:
   m_ObjectHideFlags: 0

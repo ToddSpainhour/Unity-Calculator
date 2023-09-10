@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Calculator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string Calculate(string equation)
     {
-        
+        string solution = "empty string";
+
+        // do the actual calculations
+        // switch statement
+
+        return solution;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
