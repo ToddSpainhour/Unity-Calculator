@@ -7,6 +7,7 @@ public class ButtonController : MonoBehaviour
 
     public string value; // the value we assign to the button
     public DisplayController displayController; // reference to displayController script
+    public static Calculator calculator = new Calculator();
 
 
     public void Start()
@@ -18,8 +19,9 @@ public class ButtonController : MonoBehaviour
     // append the value of the button to the text
     public void AppendValueToDisplay() // just added this argument
     {
-        Debug.Log("inside AppendValueToDisplay method " + this.value.ToString());
+        //Debug.Log("inside AppendValueToDisplay method " + this.value.ToString());
         displayController.UpdateDisplayText(value);
+        calculator.setFirstOprand(value);
     }
 
     public void EvaluateEquation()

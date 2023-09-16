@@ -6,7 +6,7 @@ public class CalculatorModel : MonoBehaviour
 {
 
     // created properties for the model
-    public float firstOperand;
+    public string firstOperand;
     public float secondOperand;
     public string selectedOperator;
     public float result;
