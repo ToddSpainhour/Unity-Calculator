@@ -7,8 +7,9 @@ public class CalculatorModel : MonoBehaviour
 
     // created properties for the model
     public string firstOperand;
-    public float secondOperand;
-    public string selectedOperator;
+    public string secondOperand;
+    public bool operatorBeenSelected;
+    public string selectedOperator = "";
     public float result;
     
     void Start()

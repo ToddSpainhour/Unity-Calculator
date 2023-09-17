@@ -39,7 +39,11 @@ public class DisplayController : MonoBehaviour
 
     public void DisplayAnswer()
     {
-        string answer = calculator.Calculate(displayText.text);
-        displayText.text = answer;
+        //string answer = calculator.Calculate(displayText.text);
+        //displayText.text = answer;
+
+        string solution = calculator.Calculate();
+        displayText.text = solution;
+        Debug.Log("solution: " + solution);
     }
 }
