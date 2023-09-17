@@ -6,9 +6,10 @@ public class CalculatorModel : MonoBehaviour
 {
 
     // created properties for the model
-    public float firstOperand;
-    public float secondOperand;
-    public string selectedOperator;
+    public string firstOperand;
+    public string secondOperand;
+    public bool operatorBeenSelected;
+    public string selectedOperator = "";
     public float result;
     
     void Start()

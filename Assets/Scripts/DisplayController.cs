@@ -33,14 +33,17 @@ public class DisplayController : MonoBehaviour
 
     public void UpdateDisplayText(string newText)
     {
-        Debug.Log("updateDisplayText just fired");
         displayText.text += newText;
+
     }
 
     public void DisplayAnswer()
     {
-        Debug.Log("inside DisplayAnswer method! =");
-        string answer = calculator.Calculate(displayText.text);
-        displayText.text = answer;
+        //string answer = calculator.Calculate(displayText.text);
+        //displayText.text = answer;
+
+        string solution = calculator.Calculate();
+        displayText.text = solution;
+        Debug.Log("solution: " + solution);
     }
 }
