@@ -52,11 +52,9 @@ public class Calculator : MonoBehaviour
     }
 
 
-    public void setFirstOprand(string valuePassedIn)
+    public void SetFirstOprand(string valuePassedIn)
     {
-        //string tempFirstprand = GetFirstOprand();
         calculatorModel.firstOperand += valuePassedIn;
-        Debug.Log("GetFirstOprand(): " + GetFirstOprand());
     }
 
 
@@ -68,10 +66,7 @@ public class Calculator : MonoBehaviour
 
     public void SetSecondOprand(string valuePassedIn)
     {
-        //string tempSecondOprand = GetSecondOprand();
-
         calculatorModel.secondOperand += valuePassedIn;
-        Debug.Log("GetSecondOprand() " + GetSecondOprand());
     }
 
 
@@ -83,7 +78,6 @@ public class Calculator : MonoBehaviour
 
     public void SetOperator(string selectedOperatorArgument)
     {
-        //Debug.Log("setOperator: " + selectedOperatorArgument);
         calculatorModel.selectedOperator = selectedOperatorArgument;
     }
 
@@ -99,20 +93,42 @@ public class Calculator : MonoBehaviour
         calculatorModel.operatorBeenSelected = false;
     }
 
+
+    public void SetOperandHasDecimalPointToTrue()
+    {
+        calculatorModel.oprandHasDecimalPoint = true;
+    }
+
+
+    public void SetOperandHasDecimalPointToFalse()
+    {
+        calculatorModel.oprandHasDecimalPoint = false;
+    }
+
+
+    public bool GetOperandHasDecimalPoint()
+    {
+        return calculatorModel.oprandHasDecimalPoint;
+    }
+
+
     public void ClearFirstOperand()
     {
         calculatorModel.firstOperand = "";
     }
+
 
     public void ClearSecondOperand()
     {
         calculatorModel.secondOperand = "";
     }
 
+
     public void ClearSelectedOperator()
     {
         calculatorModel.selectedOperator = "";
     }
+
 
     public void SetResult(float passedInValue)
     {

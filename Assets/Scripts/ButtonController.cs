@@ -17,39 +17,52 @@ public class ButtonController : MonoBehaviour
 
 
     // append the value of the button to the text
-    public void AppendValueToDisplay() // just added this argument
+    public void AppendValueToDisplay()
     {
         displayController.UpdateDisplayText(value);
-        // this adds the operator to the value and we don't want that
-        //calculator.setFirstOprand(value);
     }
 
 
     public void AppendValueToOprand(string numberEntered)
     {
-        Debug.Log("calculator.GetSelectedOperator() returns: " + calculator.GetSelectedOperator());
-
         // this is where we'll check if an operator has been picked so we'll know if it's first or second
         if(calculator.GetSelectedOperator() == "")
         {
-            Debug.Log("no operator has been selected so we'll append to the 1st oprand");
-            //string tempOprand = calculator.GetFirstOprand();
-            calculator.setFirstOprand(numberEntered);
+            if (numberEntered == ".")
+            {
+                if(calculator.GetOperandHasDecimalPoint() == false)
+                {
+                    calculator.SetOperandHasDecimalPointToTrue();
+                    calculator.SetFirstOprand(numberEntered);
+                }
+            } 
+            else
+            {
+                calculator.SetFirstOprand(numberEntered);
+            }
         } 
         else
         {
-            Debug.Log("there IS an operator selected so we'll append to the 2nd oprand");
-            calculator.SetSecondOprand(numberEntered);
+            if(numberEntered == ".")
+            {
+                if(calculator.GetOperandHasDecimalPoint() == false)
+                {
+                    calculator.SetOperandHasDecimalPointToTrue();
+                    calculator.SetSecondOprand(numberEntered);
+                }
+            } 
+            else
+            {
+                calculator.SetSecondOprand(numberEntered);
+                //calculator.SetOperandHasDecimalPointToFalse();
+            }
         }
-
-
     }
 
     public void SelectOperator(string selectedOperator)
     {
-        //calculator.setFirstOprand(value);
+        calculator.SetOperandHasDecimalPointToFalse();
         calculator.SetOperator(selectedOperator);
-        Debug.Log("GetSelectedOperator: " + calculator.GetSelectedOperator());
         calculator.ToggleOperatorBeenSelectedToTrue();
     }
 
@@ -64,5 +77,6 @@ public class ButtonController : MonoBehaviour
         calculator.ClearFirstOperand();
         calculator.ClearSecondOperand();
         calculator.ClearSelectedOperator();
+        calculator.SetOperandHasDecimalPointToFalse();
     }
 }
