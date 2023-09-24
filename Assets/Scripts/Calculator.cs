@@ -8,8 +8,8 @@ public class Calculator : MonoBehaviour
     public static CalculatorModel calculatorModel = new CalculatorModel();
     public string Calculate()
     {
-        float num1 = float.Parse(GetFirstOprand());
-        float num2 = float.Parse(GetSecondOprand());
+        float num1 = float.Parse(GetFirstOperand());
+        float num2 = float.Parse(GetSecondOperand());
 
         float tempResult = 0
             ;
@@ -41,25 +41,25 @@ public class Calculator : MonoBehaviour
         return solution;
     }
 
-    public string GetFirstOprand()
+    public string GetFirstOperand()
     {
         return calculatorModel.firstOperand;
     }
 
 
-    public void SetFirstOprand(string valuePassedIn)
+    public void SetFirstOperand(string valuePassedIn)
     {
         calculatorModel.firstOperand += valuePassedIn;
     }
 
 
-    public string GetSecondOprand()
+    public string GetSecondOperand()
     {
         return calculatorModel.secondOperand;
     }
 
 
-    public void SetSecondOprand(string valuePassedIn)
+    public void SetSecondOperand(string valuePassedIn)
     {
         calculatorModel.secondOperand += valuePassedIn;
     }
@@ -91,19 +91,19 @@ public class Calculator : MonoBehaviour
 
     public void SetOperandHasDecimalPointToTrue()
     {
-        calculatorModel.oprandHasDecimalPoint = true;
+        calculatorModel.operandHasDecimalPoint = true;
     }
 
 
     public void SetOperandHasDecimalPointToFalse()
     {
-        calculatorModel.oprandHasDecimalPoint = false;
+        calculatorModel.operandHasDecimalPoint = false;
     }
 
 
     public bool GetOperandHasDecimalPoint()
     {
-        return calculatorModel.oprandHasDecimalPoint;
+        return calculatorModel.operandHasDecimalPoint;
     }
 
 

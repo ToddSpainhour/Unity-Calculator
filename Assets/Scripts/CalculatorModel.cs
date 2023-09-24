@@ -8,7 +8,7 @@ public class CalculatorModel : MonoBehaviour
     // created properties for the model
     public string firstOperand;
     public string secondOperand;
-    public bool oprandHasDecimalPoint = false;
+    public bool operandHasDecimalPoint = false;
     public bool operatorBeenSelected;
     public string selectedOperator = "";
     public float result;
