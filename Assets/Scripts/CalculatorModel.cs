@@ -5,7 +5,7 @@ using UnityEngine;
 public class CalculatorModel : MonoBehaviour
 {
 
-    // created properties for the model
+    // this file is the Model; these properties hold the data we need
     public string firstOperand;
     public string secondOperand;
     public bool operandHasDecimalPoint = false;
