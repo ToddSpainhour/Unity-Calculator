@@ -79,4 +79,9 @@ public class ButtonController : MonoBehaviour
         calculator.ClearSelectedOperator();
         calculator.SetOperandHasDecimalPointToFalse();
     }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
