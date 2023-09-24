@@ -42,6 +42,5 @@ public class DisplayController : MonoBehaviour
     {
         string solution = calculator.Calculate();
         displayText.text = solution;
-        Debug.Log("solution: " + solution);
     }
 }

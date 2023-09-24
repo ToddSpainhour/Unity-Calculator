@@ -33,12 +33,12 @@ public class ButtonController : MonoBehaviour
                 if(calculator.GetOperandHasDecimalPoint() == false)
                 {
                     calculator.SetOperandHasDecimalPointToTrue();
-                    calculator.SetFirstOprand(numberEntered);
+                    calculator.SetFirstOperand(numberEntered);
                 }
             } 
             else
             {
-                calculator.SetFirstOprand(numberEntered);
+                calculator.SetFirstOperand(numberEntered);
             }
         } 
         else
@@ -48,12 +48,12 @@ public class ButtonController : MonoBehaviour
                 if(calculator.GetOperandHasDecimalPoint() == false)
                 {
                     calculator.SetOperandHasDecimalPointToTrue();
-                    calculator.SetSecondOprand(numberEntered);
+                    calculator.SetSecondOperand(numberEntered);
                 }
             } 
             else
             {
-                calculator.SetSecondOprand(numberEntered);
+                calculator.SetSecondOperand(numberEntered);
                 //calculator.SetOperandHasDecimalPointToFalse();
             }
         }
@@ -78,5 +78,10 @@ public class ButtonController : MonoBehaviour
         calculator.ClearSecondOperand();
         calculator.ClearSelectedOperator();
         calculator.SetOperandHasDecimalPointToFalse();
+    }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
     }
 }
