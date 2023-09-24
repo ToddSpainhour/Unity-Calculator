@@ -11,7 +11,6 @@ public class Calculator : MonoBehaviour
         float num1 = float.Parse(GetFirstOprand());
         float num2 = float.Parse(GetSecondOprand());
 
-        Debug.Log("calculate method equation argument: ");
         float tempResult = 0
             ;
         switch (GetSelectedOperator())
@@ -19,22 +18,18 @@ public class Calculator : MonoBehaviour
             case "+":
                 tempResult = num1 + num2;
                 SetResult(tempResult);
-                Debug.Log("calculator.result: + " + calculatorModel.result);
                 break;
             case "-":
                 tempResult = num1 - num2;
                 SetResult(tempResult);
-                Debug.Log("calculator.result: - " + calculatorModel.result);
                 break;
             case "*":
                 tempResult = num1 * num2;
                 SetResult(tempResult);
-                Debug.Log("calculator.result: * " + calculatorModel.result);
                 break;
             case "/":
                 tempResult = num1 / num2;
                 SetResult(tempResult);
-                Debug.Log("calculator.result: / " + calculatorModel.result);
                 break;
             default:
                 Debug.Log("oh no something went wrong in the case in calculator");

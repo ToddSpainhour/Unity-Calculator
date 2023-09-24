@@ -12,10 +12,4 @@ public class CalculatorModel : MonoBehaviour
     public bool operatorBeenSelected;
     public string selectedOperator = "";
     public float result;
-    
-    void Start()
-    {
-        Debug.Log("CalculatorModel script just started");
-    }
-
 }
