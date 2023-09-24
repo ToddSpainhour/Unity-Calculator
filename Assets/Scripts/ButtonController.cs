@@ -12,17 +12,19 @@ public class ButtonController : MonoBehaviour
 
     public void Start()
     {
+        // connects variable to game object in Unity
         displayController = GameObject.Find("DisplayPanel").GetComponent<DisplayController>();
     }
 
 
-    // append the value of the button to the text
+    // append the value of the button to the displayed text
     public void AppendValueToDisplay()
     {
         displayController.UpdateDisplayText(value);
     }
 
 
+    // appends numbers entered to the current operand; calls method to track if operand has decimal point 
     public void AppendValueToOprand(string numberEntered)
     {
         // this is where we'll check if an operator has been picked so we'll know if it's first or second
@@ -54,11 +56,12 @@ public class ButtonController : MonoBehaviour
             else
             {
                 calculator.SetSecondOperand(numberEntered);
-                //calculator.SetOperandHasDecimalPointToFalse();
             }
         }
     }
 
+
+    // calls setOperator method and method to track if operator has been selected
     public void SelectOperator(string selectedOperator)
     {
         calculator.SetOperandHasDecimalPointToFalse();
@@ -66,11 +69,15 @@ public class ButtonController : MonoBehaviour
         calculator.ToggleOperatorBeenSelectedToTrue();
     }
 
+
+    // calls method to display answer
     public void EvaluateEquation()
     {
         displayController.DisplayAnswer();
     }
 
+
+    // clears out display values and all variables in the Model
     public void Clear()
     {
         displayController.ClearDisplay();
@@ -80,6 +87,8 @@ public class ButtonController : MonoBehaviour
         calculator.SetOperandHasDecimalPointToFalse();
     }
 
+
+    // terminates application
     public void QuitApplication()
     {
         Application.Quit();
